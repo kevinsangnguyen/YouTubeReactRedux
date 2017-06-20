@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 
 // const SearchBar = () => {  //functional component
 //   return <input /> // React.createElement
 // };
 
-class SearchBar extends React.Component {
+class SearchBar extends Component {
   render() {
-    return <input />;
+    return <input onChange={(event) => console.log(event.target.value)} />; //render some jsx
+  }
+
+  //EVENT HANDLER
+  onInputChange(event){
+    console.log(event.target.value);
   }
 }
 
